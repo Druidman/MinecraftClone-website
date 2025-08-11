@@ -6,6 +6,7 @@ html, body {
 
 * {
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 button {
@@ -243,8 +244,10 @@ footer div:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 50%;
-    height: 50%;
+    min-width: 50%;
+    min-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
     font-size: 1em;
     overflow: scroll;
     overflow-x: scroll;
@@ -264,3 +267,4 @@ footer div:hover {
 #startGameButton:hover {
     width: 100%;
 }
+
