@@ -81,6 +81,10 @@ document.getElementById("githubLink").addEventListener("click",(event)=>{
     window.open("https://github.com/Druidman/minecraft-clone-opengl", "_blank");
     console.log("GitHub logo clicked");
 })
+document.getElementById("somLink").addEventListener("click",(event)=>{
+    window.open("https://summer.hackclub.com/projects/4772", "_blank");
+    console.log("SOM logo clicked");
+})
 
 document.getElementById("infoButton").addEventListener("mouseover",(event)=>{
     popInfoBox();

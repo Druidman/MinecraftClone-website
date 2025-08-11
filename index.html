@@ -53,11 +53,7 @@
             
             
         </main>
-        <footer>
-            <div id="githubLink">
-                <img  id="githubLogo" github-logo src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" crossorigin="anonymous">
-            </div>
-        </footer>
+        
         <div id="infoBox" style="display: none;">
             <p>Linux - avaiable</p>
             <p>Windows - avaiable</p>
@@ -69,18 +65,32 @@
         <button id="gameSectionReturn">Return to website</button>
         <section id="gameInfo">
             <div id="gameWarning" class="mainBox">
-                Web version of the game is in early BETA!<br>
-                There are a lot of features missing due to performance reasons including: <br>
-                    - placing / destroying blocks<br>
-                    - infinite world gen (loading new chunks)<br>
-                For fully working game version head BACK to game download page or compile game from source.
+                <p>
+                    Web version of the game is in early BETA!<br>
+                    There are a lot of features missing due to performance reasons including: <br>
+                        - placing / destroying blocks<br>
+                        - infinite world gen (loading new chunks)<br>
+                    For fully working game version head BACK to game download page or compile game from source.<br>
+                    <br>
+                    <br>
+                    I am working hard on making game work fully on web. Feel free to visit my SOM project and github
+                </p>
+                
+
             </div>
             <button id="startGameButton">PLAY</button>
             
         </section>
         <canvas id="gameCanvas" oncontextmenu="event.preventDefault()" tabindex="0" style="display: none;"></canvas>
     </section>
-
+    <footer>
+        <div id="githubLink">
+            <img  id="githubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" crossorigin="anonymous">
+        </div>
+        <div id="somLink">
+            <img  id="somLogo"  src="https://assets.hackclub.com/icon-rounded.svg"  crossorigin="anonymous">
+        </div>
+    </footer>
 
     
     
