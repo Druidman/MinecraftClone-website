@@ -87,7 +87,10 @@
             <button id="startGameButton">PLAY</button>
             
         </section>
-        <canvas id="gameCanvas" oncontextmenu="event.preventDefault()" tabindex="0" style="display: none;"></canvas>
+        <section id="canvasSection" style="display: none;">
+            <canvas id="gameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+        </div>
+        
     </section>
     <footer>
         <div id="githubLink">
@@ -101,6 +104,7 @@
     
     
 </body>
-<script src="index.js"></script>
 <script src="files/webGame/game.js"></script>
+<script src="index.js"></script>
+
 </html>

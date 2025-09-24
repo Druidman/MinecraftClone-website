@@ -1,6 +1,28 @@
 
 let gameInstance = null;
 
+function resizeCanvas() {
+    const canvas = document.getElementById("gameCanvas");
+
+    let section = document.getElementById("canvasSection");
+    const width = section.getBoundingClientRect().width
+    const height = section.getBoundingClientRect().height
+    console.log("SIZEWIDTH: " + width + " "  + height)
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    if (!gameInstance){
+        return; 
+    }
+    gameInstance.resize_game(Number(width), Number(height))
+    
+  }
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+  
 
 function downloadFile(pathToFile, downloadName){
     let a = document.createElement("a")
@@ -47,8 +69,9 @@ document.getElementById("gameSectionReturn").addEventListener("click",(event)=>{
 })
 document.getElementById("startGameButton").addEventListener("click",(event)=>{
     document.getElementById('gameInfo').style.display = "none"
-    document.getElementById('gameCanvas').style.display = "block"
+    document.getElementById('canvasSection').style.display = "block"
     document.getElementById('gameCanvas').focus()
+    
     
     MyGame({
         locateFile: function (path, prefix) {
@@ -61,6 +84,7 @@ document.getElementById("startGameButton").addEventListener("click",(event)=>{
     }).then((instance) => {
       console.log("WASM module loaded.");
       gameInstance = instance;
+      resizeCanvas();
     });
 })
 document.getElementById("webPlayButton").addEventListener("click",(event)=>{
