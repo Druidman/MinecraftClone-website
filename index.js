@@ -51,9 +51,18 @@ document.getElementById("returnToHomePage").addEventListener("click",(event)=>{
 document.getElementById("linuxPlayButton").addEventListener("click",(event)=>{
     downloadFile("files/minecraftClone-linux.zip", "minecraftGame-linux.zip")
 })
-document.getElementById("windowsPlayButton").addEventListener("click",(event)=>{
-    downloadFile("files/minecraftClone-win.zip", "minecraftGame-win.zip")
+// document.getElementById("windowsPlayButton").addEventListener("click",(event)=>{
+//     downloadFile("files/minecraftClone-win.zip", "minecraftGame-win.zip")
+// })
+
+document.getElementById("windowsPlayButton").addEventListener("mouseover",(event)=>{
+    popInfoBox();
 })
+document.getElementById("windowsPlayButton").addEventListener("mouseleave",(event)=>{
+    hideInfoBox();
+})
+
+
 document.getElementById("gameSectionReturn").addEventListener("click",(event)=>{
     if (gameInstance && gameInstance.shutdown_game) {
         gameInstance.shutdown_game(); // Call your C++ cleanup function
